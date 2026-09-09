@@ -48,8 +48,16 @@
       <section id="grid" class="grid" aria-label="Projects"></section>
     </main>
 
+    <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project details">
+      <div class="modal-backdrop" data-close></div>
+      <div class="modal-panel">
+        <button class="modal-close" data-close aria-label="Close">&times;</button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
     <footer class="footer">
-      <p>Built as a single static site · deployable anywhere · replace <code>assets/&lt;slug&gt;.png</code> with real screenshots.</p>
+      <p>Built as a single static site &middot; deployable anywhere.</p>
     </footer>
 
     <script src="script.js"></script>

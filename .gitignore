@@ -1,0 +1,6 @@
+# Owner-only files (do not publish)
+LOCAL-NOTES.md
+
+# OS
+.DS_Store
+Thumbs.db
