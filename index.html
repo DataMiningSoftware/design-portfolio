@@ -3,53 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Design Portfolio</title>
+    <title>Nawfal Nadzrim — Projects</title>
+    <meta
+      name="description"
+      content="Portfolio of Nawfal Nadzrim — AI/LLM, machine learning, backend, mobile, and design projects."
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="hero">
-      <h1>Nawfal Nadzrim</h1>
-      <p class="tagline">Graphic designer &amp; product thinker — transit, product UI, and promotional design.</p>
+      <div class="hero-inner">
+        <h1>Nawfal Nadzrim</h1>
+        <p class="tagline">
+          Software &amp; AI engineer building across LLM apps, machine learning,
+          backend systems, mobile, and design.
+        </p>
+        <div class="hero-links">
+          <a class="btn btn-primary" href="https://github.com/DataMiningSoftware" target="_blank" rel="noopener">
+            GitHub
+          </a>
+          <!-- Add your LinkedIn / email when ready:
+          <a class="btn" href="https://www.linkedin.com/in/YOUR_HANDLE" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="mailto:you@example.com">Email</a>
+          -->
+        </div>
+        <p class="hero-note">
+          {{projects.length}} projects · some live, some with test suites · all on GitHub
+        </p>
+      </div>
     </header>
 
+    <nav class="filters" aria-label="Filter projects">
+      <button class="filter is-active" data-filter="all">All</button>
+      <button class="filter" data-filter="ai">AI / LLM</button>
+      <button class="filter" data-filter="ml">Machine Learning</button>
+      <button class="filter" data-filter="backend">Backend</button>
+      <button class="filter" data-filter="mobile">Mobile</button>
+      <button class="filter" data-filter="design">Design</button>
+      <button class="filter" data-filter="team">Team</button>
+      <button class="filter" data-filter="private">Private</button>
+    </nav>
+
     <main>
-      <section class="project" id="transit">
-        <h2>Schematic Transit Map</h2>
-        <p>
-          A clean, geometry-based schematic map of a transit network. Focused on
-          legibility, consistent 45° lines, and clear station hierarchy.
-        </p>
-        <div class="placeholder">[ transit map asset ]</div>
-      </section>
-
-      <section class="project" id="roomiematch">
-        <h2>RoomieMatch UI</h2>
-        <p>
-          Interface design for a roommate-matching app: onboarding, profile cards,
-          and a swipe-based matching flow.
-        </p>
-        <div class="placeholder">[ RoomieMatch UI asset ]</div>
-      </section>
-
-      <section class="project" id="society">
-        <h2>Society Promo Assets</h2>
-        <p>
-          Promotional material for a university society: poster, social banners,
-          and event graphics built around one visual system.
-        </p>
-        <div class="placeholder">[ society promo asset ]</div>
-      </section>
-
-      <section class="case-study" id="case">
-        <h2>Case Study — Transit Map</h2>
-        <p><strong>Problem:</strong> an existing map was geographically accurate but unreadable at a glance.</p>
-        <p><strong>Approach:</strong> abstracted the network into a schematic using 45° angles, unified station markers, and a two-color palette.</p>
-        <p><strong>Outcome:</strong> journey planning time dropped and the map was adopted across station signage and the app.</p>
-      </section>
+      <section id="grid" class="grid" aria-label="Projects"></section>
     </main>
 
-    <footer>
-      <p>Built as a static portfolio — swap the placeholders for your final exports.</p>
+    <footer class="footer">
+      <p>Built as a single static site · deployable anywhere · replace <code>assets/&lt;slug&gt;.png</code> with real screenshots.</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
